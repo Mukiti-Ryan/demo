@@ -6,17 +6,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/v1/student")
+//@RequestMapping(path = "/api/v1/student")
 public class StudentController {
-
-    private final StudentService studentService;
-
     @Autowired
-    public StudentController(StudentService studentService) {
-        this.studentService = studentService;
-    }
+    private  StudentService studentService;
 
-    @GetMapping
+//    public StudentController(StudentService studentService) {
+//        this.studentService = studentService;
+//    }
+
+    @GetMapping("/students")
     public List<Student> getStudents() {
         return studentService.getStudents();
     }

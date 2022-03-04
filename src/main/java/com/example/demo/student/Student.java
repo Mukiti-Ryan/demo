@@ -1,7 +1,6 @@
 package com.example.demo.student;
 
 import lombok.*;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
@@ -23,6 +22,7 @@ public class Student {
             strategy = GenerationType.SEQUENCE,
             generator = "student_sequence"
     )
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;
